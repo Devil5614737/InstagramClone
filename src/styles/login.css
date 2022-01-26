@@ -1,0 +1,90 @@
+.login-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 32px;
+}
+
+.login-container .background {
+  width: 454px;
+  height: 580px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 876px) {
+  .login-container .background {
+    display: none;
+  }
+}
+
+.login-container .login-card {
+  border: 1px solid #dbdbdb;
+  width: 400px;
+  height: 350px;
+  background-color: white;
+  margin-top: 32px;
+}
+
+.login-container .login-card img {
+  width: 175px;
+  height: 51px;
+  display: -ms-grid;
+  display: grid;
+  margin: 20px auto;
+}
+
+.login-container .login-card .input-container {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.login-container .login-card .input-container .input {
+  border: 1px solid #dbdbdb;
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 8px;
+  font-size: 1.4rem;
+  padding-left: .6em;
+}
+
+.login-container .login-card .input-container .input:focus {
+  outline: none;
+}
+
+.login-container .login-card .input-container .login-btn {
+  background-color: #0095f6;
+  color: white;
+  border: none;
+  margin-top: 12px;
+  width: 100%;
+  height: 30px;
+  font-weight: bold;
+  letter-spacing: .7px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.signup-link {
+  background-color: white;
+  width: 100%;
+  height: auto;
+  margin-top: 35px;
+  border: none;
+}
+
+.signup-link p {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.signup-link p span {
+  font-weight: bold;
+  color: #0095f6;
+  cursor: pointer;
+}
+/*# sourceMappingURL=login.css.map */

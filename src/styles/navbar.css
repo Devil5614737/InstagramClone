@@ -1,0 +1,107 @@
+.navbar-container {
+  padding: 0 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.1em 2.2em;
+  margin: 0 auto;
+  border: 1px solid #dbdbdb;
+  background-color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar-container img {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 29px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 103px;
+  cursor: pointer;
+}
+
+.navbar-container #input {
+  height: 36px;
+  width: 268px;
+  margin-left: 32px;
+  background-color: #efefef;
+  border: none;
+  padding: 0.6em;
+}
+
+@media screen and (max-width: 734px) {
+  .navbar-container #input {
+    display: none;
+  }
+}
+
+.navbar-container #input:focus {
+  outline: none;
+}
+
+.navbar-container .links ul li img {
+  margin-right: 32px;
+  width: 25px;
+  height: 25px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 734px) {
+  .navbar-container .links ul li img {
+    width: 22px;
+    height: 22px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-container .links ul li img {
+    width: 18px;
+    height: 18px;
+    margin-right: 16px;
+  }
+}
+
+.navbar-container .links ul li img:nth-of-type(6) {
+  border-radius: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.logout-container {
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  position: fixed;
+  right: 80px;
+  top: 70px;
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  z-index: 100;
+  width: 100px;
+  text-align: center;
+}
+
+.logout-container hr {
+  width: 100%;
+}
+
+.logout-container p {
+  line-height: 1.7;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #3f3e3e;
+}
+/*# sourceMappingURL=navbar.css.map */

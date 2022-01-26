@@ -1,0 +1,259 @@
+@import 'variables';
+
+
+.home-container{
+.home-content-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.1em 5em;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    @media screen and (max-width:600px) {
+    padding: 1.1em 4em;
+    }
+    // place-items: center;
+    .home-content-left{
+        .upload-container{
+            position: relative;
+            .upload-btn{
+                background-color: $blue;
+                color: white;
+                font-size: 1.7rem;
+                border: none;
+                position: absolute;
+                right: 0;
+                margin-top: 12px;
+                padding: .3em;
+                cursor: pointer;
+            }
+            .upload{
+                border: 1px solid #dbdbdb;
+                width: 370px;
+                background-color: white;
+                height: 70px;
+                position: relative;
+                textarea{
+                    width: 100%;
+                    height: 100%;
+                    padding: .5em;
+                    font-size: 1.6rem;
+                    font-family: sans-serif;
+                    border: none;
+                    resize: none;
+                
+                    &:focus{
+                        outline: none;
+                    }
+                }
+                .upload-icon{
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    label{
+                     img{
+                        width: 30px;
+                        height: 30px;
+                        cursor: pointer;
+                        object-fit: contain;
+                     }   
+                    }
+                    input{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+}
+
+.post-card-container{
+    margin-top: 92px;
+    .post-card{
+   
+        background-color: white;
+        border: 1px solid #dbdbdb;
+        margin-bottom: 32px;
+        .post-card-top{
+            padding: 1em;
+            display: flex;
+            align-items: center;
+            img{
+                width: 30px;
+                height: 30px;
+                object-fit: cover;
+                border-radius: 100%;
+            }
+            p{
+                font-size: 1.5rem;
+                font-weight: 500;
+                margin-left: 8px;
+            }
+        }
+        img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .res-icons{
+            padding: .5em 1em;
+            img{
+                width: 25px;
+                height: 25px;
+                object-fit: contain;
+                cursor: pointer;
+            }
+        }
+        .post-desc{
+            padding: 0em 1em;
+            font-size: 1.5rem;
+            line-height: 1.7;
+            span{
+                font-weight: bold;
+                margin-right: 8px;
+            }
+        }
+       
+            .comments{
+                padding: 0em 1em;
+                font-size: 1.5rem;
+                span{
+                    font-weight: bold;
+                    margin-right: 8px;
+                }
+            }
+            .comment-input{
+                border: 1px solid #dbdbdb;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-right: .6em;
+                input{
+                    width: 100%;
+                    height: 40px;
+                    border: none;
+                    padding: 0 1em;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+                .comment-btn{
+                    color: $blue;
+                    font-weight: bold;
+                 font-size: 1.3rem;
+                    cursor: pointer;
+                }
+            }
+      
+    }
+}
+
+
+
+
+.home-content-right{
+    position: fixed;
+    // top: 0px;
+    right: 0;
+    z-index: 321;
+
+}
+
+
+.friends-container{
+    position:fixed;
+    right: 150px;
+    top: 70px;
+    width:300px ;
+    max-width: 400px;
+    @media screen and (max-width:950px){
+        display:none;
+    }
+    
+    .user-profile{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .left{
+            display: flex;
+            align-items: center;
+            img{
+                width:66px;
+                height:66px;
+                border-radius: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+            .info{
+                margin-left: 12px;
+                p{
+                    font-size: 1.5rem;
+                    color:black;
+                    &:nth-of-type(2){
+                        color: grey;
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+        p{
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: $blue;
+            cursor: not-allowed;
+        }
+
+    }
+    .suggestions{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 12px;
+      
+        p{
+            font-weight: bold;
+            font-size: 1.7rem;
+            color: grey;
+            &:nth-of-type(2){
+                color: black;
+                font-size: 1.4rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+.profiles{
+    margin-bottom: 12px;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .profiles-left{
+        display: flex;
+        align-items: center;
+        img{
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 100%;
+
+        }
+        p{
+            cursor: pointer;
+            font-size: 1.7rem;
+            margin-left: 12px;
+        }
+    }
+    .profiles-right{
+        p{
+            font-size: 1.3rem;
+            font-weight: bold;
+            color:$blue;
+            cursor: pointer;
+        }
+    }
+}

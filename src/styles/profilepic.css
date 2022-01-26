@@ -1,0 +1,44 @@
+.profile-pic-container {
+  width: 250px;
+  text-align: center;
+  line-height: 2;
+  background-color: white;
+  border-radius: 12px;
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.profile-pic-container .title {
+  margin-bottom: 22px;
+}
+
+.profile-pic-container p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.profile-pic-container p:nth-of-type(2) {
+  color: red;
+}
+
+.label {
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #0095f6;
+}
+
+#upload {
+  display: none;
+}
+
+hr {
+  color: #dbdbdb;
+}
+/*# sourceMappingURL=profilepic.css.map */

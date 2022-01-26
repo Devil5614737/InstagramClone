@@ -1,0 +1,234 @@
+.main-container .profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 12px;
+  padding: 1.1em 2.2em;
+}
+
+.main-container .profile-container .profile-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 736px) {
+  .main-container .profile-container .profile-info {
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+}
+
+.main-container .profile-container .profile-info img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 736px) {
+  .main-container .profile-container .profile-info img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.main-container .profile-container .profile-info .user-info .userinfo {
+  margin-top: 12px;
+  margin-left: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 12px;
+}
+
+@media screen and (max-width: 736px) {
+  .main-container .profile-container .profile-info .user-info .userinfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.main-container .profile-container .profile-info .user-info .userinfo p {
+  font-size: 1.8rem;
+}
+
+.main-container .profile-container .profile-info .user-info .userinfo p:nth-of-type(2) {
+  border: 1px solid #dbdbdb;
+  padding: 0.2em 0.7em;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 22px;
+}
+
+@media screen and (max-width: 736px) {
+  .main-container .profile-container .profile-info .user-info .userinfo p:nth-of-type(2) {
+    margin-top: 12px;
+    padding: 0.2em 3em;
+    font-size: 1.6rem;
+  }
+}
+
+.main-container .profile-container .profile-info .user-info .user-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 12px;
+}
+
+@media screen and (max-width: 736px) {
+  .main-container .profile-container .profile-info .user-info .user-stats {
+    display: none;
+  }
+}
+
+.main-container .profile-container .profile-info .user-info .user-stats p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-right: 22px;
+  margin-top: 8px;
+}
+
+.main-container .profile-container .profile-info .user-info .user-stats p span {
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+.main-container .profile-container .profile-info .user-info .username {
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-left: 12px;
+  margin-top: 22px;
+}
+
+.post-container {
+  padding: 1.1em 2.2em;
+  margin-top: 16px;
+}
+
+.post-container .title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.post-container .user-post-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1%;
+  margin-top: 12px;
+  grid-row-gap: 0.2%;
+}
+
+.post-container .user-post-container .posts {
+  position: relative;
+  cursor: pointer;
+}
+
+.post-container .user-post-container .posts:hover::before {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.post-container .user-post-container .posts:hover:hover .post-stats-container {
+  opacity: 1;
+}
+
+.post-container .user-post-container .posts:hover:hover #removePost {
+  opacity: 1;
+}
+
+.post-container .user-post-container .posts img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.post-container .user-post-container .posts .post-stats-container {
+  position: absolute;
+  top: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.post-container .user-post-container .posts .post-stats-container .post-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 8px;
+}
+
+.post-container .user-post-container .posts .post-stats-container .post-stats img {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+}
+
+.post-container .user-post-container .posts .post-stats-container .post-stats p {
+  color: white;
+  font-size: 1.5rem;
+}
+
+#removePost {
+  position: absolute;
+  z-index: 4324231;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  right: 10px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 0;
+}
+
+.follow-btn {
+  color: white;
+  background-color: #0095f6;
+  padding: 0.2em 0.7em;
+  margin-right: 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 22px;
+}
+
+@media screen and (max-width: 736px) {
+  .follow-btn {
+    margin-top: 12px;
+    padding: 0.2em 3em;
+    font-size: 1.6rem;
+  }
+}
+/*# sourceMappingURL=profile.css.map */

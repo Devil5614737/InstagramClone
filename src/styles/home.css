@@ -1,0 +1,320 @@
+.home-container .home-content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.1em 5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 600px) {
+  .home-container .home-content-container {
+    padding: 1.1em 4em;
+  }
+}
+
+.home-container .home-content-container .home-content-left .upload-container {
+  position: relative;
+}
+
+.home-container .home-content-container .home-content-left .upload-container .upload-btn {
+  background-color: #0095f6;
+  color: white;
+  font-size: 1.7rem;
+  border: none;
+  position: absolute;
+  right: 0;
+  margin-top: 12px;
+  padding: .3em;
+  cursor: pointer;
+}
+
+.home-container .home-content-container .home-content-left .upload-container .upload {
+  border: 1px solid #dbdbdb;
+  width: 370px;
+  background-color: white;
+  height: 70px;
+  position: relative;
+}
+
+.home-container .home-content-container .home-content-left .upload-container .upload textarea {
+  width: 100%;
+  height: 100%;
+  padding: .5em;
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  border: none;
+  resize: none;
+}
+
+.home-container .home-content-container .home-content-left .upload-container .upload textarea:focus {
+  outline: none;
+}
+
+.home-container .home-content-container .home-content-left .upload-container .upload .upload-icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.home-container .home-content-container .home-content-left .upload-container .upload .upload-icon label img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.home-container .home-content-container .home-content-left .upload-container .upload .upload-icon input {
+  display: none;
+}
+
+.post-card-container {
+  margin-top: 92px;
+}
+
+.post-card-container .post-card {
+  background-color: white;
+  border: 1px solid #dbdbdb;
+  margin-bottom: 32px;
+}
+
+.post-card-container .post-card .post-card-top {
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.post-card-container .post-card .post-card-top img {
+  width: 30px;
+  height: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+}
+
+.post-card-container .post-card .post-card-top p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: 8px;
+}
+
+.post-card-container .post-card img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.post-card-container .post-card .res-icons {
+  padding: .5em 1em;
+}
+
+.post-card-container .post-card .res-icons img {
+  width: 25px;
+  height: 25px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: pointer;
+}
+
+.post-card-container .post-card .post-desc {
+  padding: 0em 1em;
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+.post-card-container .post-card .post-desc span {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.post-card-container .post-card .comments {
+  padding: 0em 1em;
+  font-size: 1.5rem;
+}
+
+.post-card-container .post-card .comments span {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.post-card-container .post-card .comment-input {
+  border: 1px solid #dbdbdb;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: .6em;
+}
+
+.post-card-container .post-card .comment-input input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  padding: 0 1em;
+}
+
+.post-card-container .post-card .comment-input input:focus {
+  outline: none;
+}
+
+.post-card-container .post-card .comment-input .comment-btn {
+  color: #0095f6;
+  font-weight: bold;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.home-content-right {
+  position: fixed;
+  right: 0;
+  z-index: 321;
+}
+
+.friends-container {
+  position: fixed;
+  right: 150px;
+  top: 70px;
+  width: 300px;
+  max-width: 400px;
+}
+
+@media screen and (max-width: 950px) {
+  .friends-container {
+    display: none;
+  }
+}
+
+.friends-container .user-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.friends-container .user-profile .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.friends-container .user-profile .left img {
+  width: 66px;
+  height: 66px;
+  border-radius: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.friends-container .user-profile .left .info {
+  margin-left: 12px;
+}
+
+.friends-container .user-profile .left .info p {
+  font-size: 1.5rem;
+  color: black;
+}
+
+.friends-container .user-profile .left .info p:nth-of-type(2) {
+  color: grey;
+  font-size: 1.3rem;
+}
+
+.friends-container .user-profile p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #0095f6;
+  cursor: not-allowed;
+}
+
+.friends-container .suggestions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 12px;
+}
+
+.friends-container .suggestions p {
+  font-weight: bold;
+  font-size: 1.7rem;
+  color: grey;
+}
+
+.friends-container .suggestions p:nth-of-type(2) {
+  color: black;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.profiles {
+  margin-bottom: 12px;
+  margin-top: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.profiles .profiles-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profiles .profiles-left img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+}
+
+.profiles .profiles-left p {
+  cursor: pointer;
+  font-size: 1.7rem;
+  margin-left: 12px;
+}
+
+.profiles .profiles-right p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #0095f6;
+  cursor: pointer;
+}
+/*# sourceMappingURL=home.css.map */
