@@ -23,7 +23,7 @@ const handleChange=e=>{
 // login the user
 const loginUser=async()=>{
   const{email,password}=values;
-  const res=await fetch('http://localhost:4000/login',{
+  const res=await fetch('https://instagram-backend12.herokuapp.com/login',{
     method:'POST',
     body:JSON.stringify({
       email,password
@@ -46,7 +46,7 @@ const loginUser=async()=>{
 // signup the user
 const signupUser=async()=>{
   const{fullname,username,email,password}=values;
-  const res=await fetch('http://localhost:4000/signup',{
+  const res=await fetch('https://instagram-backend12.herokuapp.com/signup',{
     method:'POST',
     body:JSON.stringify({
     fullname, username, email,password

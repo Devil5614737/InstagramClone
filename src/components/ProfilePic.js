@@ -29,7 +29,7 @@ export const ProfilePic = ({ show, setIsUploaded }) => {
 
   useEffect(() => {
     if (url) {
-      fetch("http://localhost:4000/user/updatepic", {
+      fetch("https://instagram-backend12.herokuapp.com/user/updatepic", {
         method: "PUT",
         body: JSON.stringify({
           pic: url,

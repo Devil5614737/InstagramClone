@@ -17,7 +17,7 @@ const[isUploaded,setIsUploaded]=useState(false)
 
 useEffect(()=>{
   const fetchUser=async()=>{
-  const res=await fetch('http://localhost:4000/user',{
+  const res=await fetch('https://instagram-backend12.herokuapp.com/user',{
     method:'GET',
     headers:{
       'x-auth-token':localStorage.getItem('token')
