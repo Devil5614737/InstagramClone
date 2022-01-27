@@ -41,7 +41,7 @@ function Home() {
 
   useEffect(() => {
     if (url) {
-      fetch("https://instagram-backend12.herokuapp.com/post", {
+      fetch("http://localhost:4000/post", {
         method: "POST",
         body: JSON.stringify({
           title,
@@ -72,7 +72,7 @@ function Home() {
   // implement comments in post
 const handleComment=async(id)=>{
   
-  const res=await fetch('https://instagram-backend12.herokuapp.com/post/comment',{
+  const res=await fetch('http://localhost:4000/post/comment',{
     method:"PUT",
     body:JSON.stringify({
      "text":comment,
@@ -95,7 +95,7 @@ const handleComment=async(id)=>{
 
   useEffect(() => {
     axios
-      .get("https://instagram-backend12.herokuapp.com/post/allpost")
+      .get("http://localhost:4000/post/allpost")
       .then((res) => setPosts(res.data.posts.reverse()))
       .then((e) => console.log(e));
 
@@ -108,7 +108,7 @@ const handleComment=async(id)=>{
 
 useEffect(() => {
   axios
-    .get("https://instagram-backend12.herokuapp.com/user/profiles")
+    .get("http://localhost:4000/user/profiles")
     .then((res) => setProfiles(res.data))
     .then((e) => console.log(e));
 }, []);
@@ -121,7 +121,7 @@ const filteredProfiles=profiles.filter(profile=>{
 
 // other users profile
 const handleOtherProfiles=async(id)=>{
-fetch('https://instagram-backend12.herokuapp.com/user/otherprofile',{
+fetch('http://localhost:4000/user/otherprofile',{
   method:'POST',
   body:JSON.stringify({
     "id":id
@@ -136,7 +136,7 @@ navigate('/userprofile')
 
 }).catch(e=>console.log(e))
 
-fetch('https://instagram-backend12.herokuapp.com/post/userpost',{
+fetch('http://localhost:4000/post/userpost',{
   method:'POST',
   body:JSON.stringify({
     "id":id

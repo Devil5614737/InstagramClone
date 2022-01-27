@@ -13,11 +13,11 @@ const[token,setToken]=useState('')
 const[userProfile,setUserProfile]=useState([])
 const[otherUserPost,setOtherUserPost]=useState([]);
 const[isUploaded,setIsUploaded]=useState(false)
-const[isAuth,setIsAuth]=useState(false)
+
 
 useEffect(()=>{
   const fetchUser=async()=>{
-  const res=await fetch('https://instagram-backend12.herokuapp.com/user',{
+  const res=await fetch('http://localhost:4000/user',{
     method:'GET',
     headers:{
       'x-auth-token':localStorage.getItem('token')
@@ -30,15 +30,15 @@ useEffect(()=>{
   fetchUser()
   },[token||isUploaded])
 
-
+console.log(user)
   return (
 
-  <Context.Provider value={{setUser,user,setToken,userProfile,setUserProfile,otherUserPost,setOtherUserPost,isUploaded,setIsUploaded,isAuth,setIsAuth}}>
+  <Context.Provider value={{setUser,user,setToken,userProfile,setUserProfile,otherUserPost,setOtherUserPost,isUploaded,setIsUploaded}}>
     <Routes>
       <Route path='/' element={<Login/>}/>
-      <Route path='/home' element={isAuth?<Home/>:<Login/>}/>
-      <Route path='/profile' element={isAuth?<Profile/>:<Login/>}/>
-      <Route path='/userprofile' element={isAuth?<UserProfile/>:<Login/>}/>
+      <Route path='/home' element={<Home/>}/>
+      <Route path='/profile' element={<Profile/>}/>
+      <Route path='/userprofile' element={<UserProfile/>}/>
       </Routes>
   </Context.Provider>
   );

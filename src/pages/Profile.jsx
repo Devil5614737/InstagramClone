@@ -20,7 +20,7 @@ function Profiile() {
 
 // removing post
 const handleRemove=async(id)=>{
-  const res=await fetch('https://instagram-backend12.herokuapp.com/post/removepost',{
+  const res=await fetch('http://localhost:4000/post/removepost',{
     method:'DELETE',
     body:JSON.stringify({
       postId:id
@@ -36,7 +36,7 @@ const handleRemove=async(id)=>{
 
   useEffect(() => {
     axios
-      .get("https://instagram-backend12.herokuapp.com/post/mypost", {
+      .get("http://localhost:4000/post/mypost", {
         headers: {
           "x-auth-token": localStorage.getItem("token"),
         },
